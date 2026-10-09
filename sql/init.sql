@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS date_test DEFAULT CHARACTER SET utf8mb4;
+USE date_test;
+
+CREATE TABLE IF NOT EXISTS college (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    code VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS student (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    major VARCHAR(100),
+    age INT,
+    enrollment_date DATE,
+    graduated TINYINT(1) DEFAULT 0,
+    tuition DECIMAL(10,2)
+);
